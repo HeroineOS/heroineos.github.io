@@ -1,10 +1,10 @@
-/* HeroineOS site. The accent is one variable: swap --accent (and its
-   light-mode text shade, --accent-ink) for the final bronze. */
+/* HeroineOS site. Colors from the mascot: her hair (pale muted taupe) is
+   the accent, the near-black violet behind her is the dark background. */
 
 :root {
-  --accent: #f5c400;
-  --accent-ink: #f5c400;      /* accent used as text (links, labels) */
-  --on-accent: #141414;       /* text on accent fills */
+  --accent: #baada1;
+  --accent-ink: #baada1;      /* accent used as text (links, labels) */
+  --on-accent: #19171f;       /* text on accent fills */
   --radius: 10px;
   --max: 1120px;
   --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, sans-serif;
@@ -13,26 +13,26 @@
 
 :root,
 [data-theme="dark"] {
-  --bg: #121212;
-  --bg-alt: #181818;
-  --surface: #1e1e1e;
-  --border: #2c2c2c;
-  --text: #ededed;
-  --text-dim: #a3a3a3;
-  --code-bg: #0b0b0b;
+  --bg: #19171f;
+  --bg-alt: #1e1c25;
+  --surface: #23212d;
+  --border: #34313e;
+  --text: #ecebef;
+  --text-dim: #a19ca9;
+  --code-bg: #131119;
   color-scheme: dark;
 }
 
 [data-theme="light"] {
-  --bg: #fafaf8;
-  --bg-alt: #f1f0ec;
+  --bg: #f7f5f2;
+  --bg-alt: #efebe6;
   --surface: #ffffff;
-  --border: #e2e0da;
-  --text: #171717;
-  --text-dim: #5a5a5a;
-  --code-bg: #1a1a1a;
-  /* Yellow text is unreadable on white: a deep shade of it. */
-  --accent-ink: #8a6a00;
+  --border: #e2ddd6;
+  --text: #1d1a22;
+  --text-dim: #5b5763;
+  --code-bg: #1e1c25;
+  /* The pale taupe can't be read on white: a deep shade of it (5.8:1). */
+  --accent-ink: #6f5d50;
   color-scheme: light;
 }
 

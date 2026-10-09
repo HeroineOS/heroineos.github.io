@@ -63,24 +63,24 @@ async function copy() {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  color: #e8e8e8;
+  color: #ecebef;
 }
 .term-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px 8px 16px;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid #2c2935;
   font-size: 0.8rem;
-  color: #9a9a9a;
+  color: #a19ca9;
 }
 .copy {
   font: 600 0.8rem var(--font);
   padding: 4px 10px;
   border-radius: 6px;
-  border: 1px solid #3a3a3a;
-  background: #1c1c1c;
-  color: #e8e8e8;
+  border: 1px solid #3a3644;
+  background: #23212d;
+  color: #ecebef;
   cursor: pointer;
 }
 .copy:hover {

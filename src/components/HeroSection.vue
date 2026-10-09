@@ -19,31 +19,9 @@
         <p class="note">No ISO yet: the desktop's parts run on Debian today.</p>
       </div>
 
-      <!-- A small sketch of the desktop: bar, tiled windows, launcher. -->
-      <div class="screen" aria-hidden="true">
-        <div class="topbar">
-          <span class="cat"></span>
-          <span class="ws"><i class="on"></i><i></i><i></i><i></i></span>
-          <span class="clock">09:41</span>
-          <span class="sys"><i></i><i></i><i></i></span>
-        </div>
-        <div class="tiles">
-          <div class="win big">
-            <div class="title"><i></i><i></i><i></i></div>
-            <div class="term">
-              <p><b>$</b> herowallpaper --version</p>
-              <p class="dim">herowallpaper 0.1.7</p>
-              <p><b>$</b> herobar --version</p>
-              <p class="dim">herobar 0.1.20</p>
-              <p><b>$</b> <span class="caret"></span></p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="win"><div class="title"><i></i><i></i><i></i></div><div class="lines"><i></i><i></i><i class="s"></i></div></div>
-            <div class="win"><div class="title"><i></i><i></i><i></i></div><div class="lines"><i class="s"></i><i></i></div></div>
-          </div>
-        </div>
-      </div>
+      <figure class="mascot">
+        <img src="/heroine.webp" width="460" height="460" alt="Heroine, the HeroineOS mascot: a catgirl with long taupe hair in a black hoodie" />
+      </figure>
     </div>
   </section>
 </template>
@@ -81,150 +59,25 @@ h1 {
   font-size: 0.9rem;
 }
 
-/* The desktop sketch: always dark, like the real default. */
-.screen {
-  --s-bg: #0f0f0f;
-  --s-panel: #1b1b1b;
-  --s-win: #191919;
-  --s-line: #2e2e2e;
-  background: var(--s-bg);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 10px;
-  aspect-ratio: 16 / 10.5;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.5);
-}
-.topbar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  height: 26px;
-  padding: 0 10px;
-  background: var(--s-panel);
-  border-radius: 8px;
-  font: 600 11px var(--font);
-  color: #d8d8d8;
-}
-.cat {
-  width: 12px;
-  height: 12px;
-  border-radius: 3px;
-  background: var(--accent);
-}
-.ws {
-  display: flex;
-  gap: 5px;
-}
-.ws i {
-  width: 7px;
-  height: 7px;
-  border-radius: 99px;
-  background: #4a4a4a;
-}
-.ws i.on {
-  width: 18px;
-  background: var(--accent);
-}
-.clock {
-  margin: 0 auto;
-}
-.sys {
-  display: flex;
-  gap: 5px;
-}
-.sys i {
-  width: 14px;
-  height: 7px;
-  border-radius: 3px;
-  background: #4a4a4a;
-}
-.tiles {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 10px;
-  min-height: 0;
-}
-.col {
-  display: grid;
-  gap: 10px;
-}
-.win {
-  background: var(--s-win);
-  border: 1px solid var(--s-line);
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.win.big {
-  border-color: color-mix(in srgb, var(--accent) 70%, transparent);
-}
-.title {
-  display: flex;
-  gap: 5px;
-  padding: 7px 9px;
-  border-bottom: 1px solid var(--s-line);
-}
-.title i {
-  width: 7px;
-  height: 7px;
-  border-radius: 99px;
-  background: #3a3a3a;
-}
-.term {
-  padding: 10px 12px;
-  font: 12px/1.7 var(--mono);
-  color: #e6e6e6;
-}
-.term p {
+/* Heroine, on her own background color (the dark surface). */
+.mascot {
   margin: 0;
+  justify-self: center;
+  max-width: 420px;
+  width: 100%;
 }
-.term b {
-  color: var(--accent);
+.mascot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 40px 80px -40px color-mix(in srgb, var(--accent) 45%, transparent);
 }
-.term .dim {
-  color: #8c8c8c;
-}
-.caret {
-  display: inline-block;
-  width: 7px;
-  height: 13px;
-  vertical-align: -2px;
-  background: #e6e6e6;
-  animation: blink 1.1s steps(1) infinite;
-}
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-.lines {
-  padding: 12px;
-  display: grid;
-  gap: 8px;
-}
-.lines i {
-  height: 7px;
-  border-radius: 4px;
-  background: var(--s-line);
-}
-.lines i.s {
-  width: 60%;
-}
-
 @media (max-width: 900px) {
   .grid2 {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .caret {
-    animation: none;
   }
 }
 </style>

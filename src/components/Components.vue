@@ -1,4 +1,6 @@
 <script setup>
+import DesktopSketch from './DesktopSketch.vue'
+
 const parts = [
   { name: 'HeroWM', repo: 'HeroWM', what: 'The Wayland compositor, from fht-compositor: tiling and floating windows, workspaces, animations.', state: 'In progress' },
   { name: 'HeroBar', repo: 'HeroBar', what: 'The panel: workspaces, taskbar with folders, clock, sound, network, battery.', state: 'Usable' },
@@ -14,9 +16,14 @@ const parts = [
 <template>
   <section id="components">
     <div class="wrap">
-      <p class="eyebrow">The desktop</p>
-      <h2>Small programs, each doing one thing well.</h2>
-      <p class="lead">Each part of the desktop is its own program and its own repository, so you can use all of it or just the pieces you want on another Wayland desktop.</p>
+      <div class="intro">
+        <div>
+          <p class="eyebrow">The desktop</p>
+          <h2>Small programs, each doing one thing well.</h2>
+          <p class="lead">Each part of the desktop is its own program and its own repository, so you can use all of it or just the pieces you want on another Wayland desktop.</p>
+        </div>
+        <DesktopSketch />
+      </div>
       <div class="grid parts">
         <a v-for="p in parts" :key="p.name" class="card part" :href="`https://github.com/HeroineOS/${p.repo}`" rel="noopener">
           <div class="head">
@@ -31,6 +38,17 @@ const parts = [
 </template>
 
 <style scoped>
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .intro {
+    grid-template-columns: 1fr;
+  }
+}
 .parts {
   margin-top: 36px;
 }

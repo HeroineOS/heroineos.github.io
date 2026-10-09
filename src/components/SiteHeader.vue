@@ -67,7 +67,7 @@ const links = [
   color: var(--accent-ink);
 }
 .mark-bg {
-  fill: #161616;
+  fill: #19171f;
 }
 nav {
   display: flex;

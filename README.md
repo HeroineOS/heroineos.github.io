@@ -13,5 +13,7 @@ npm run build    # dist/
 
 Pushing to `main` builds and publishes it to GitHub Pages (`.github/workflows/pages.yml`).
 
-The accent color is one variable at the top of `src/style.css`: `--accent`, plus
-`--accent-ink` (a darker shade for text in light mode, where yellow is unreadable on white).
+Colors come from the mascot (`public/heroine.webp`, the org picture): her hair's pale
+muted taupe `#baada1` is the accent, and the violet near-black behind her the dark theme.
+They're variables at the top of `src/style.css`; `--accent-ink` is a deeper taupe for
+text in light mode, where the pale one can't be read on white.
