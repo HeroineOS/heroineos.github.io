@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HeroineOS: addicted to pure optimization</title>
+    <meta name="description" content="HeroineOS is a fast, light Debian-based Linux distribution with its own Wayland desktop, built for every machine from old laptops to ARM Chromebooks." />
+    <meta name="theme-color" content="#141414" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      // The theme before the first paint (no flash): the one picked, else the system's.
+      try {
+        var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+        document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <noscript><p style="padding:2rem">HeroineOS: a fast, light Debian-based Linux distribution. See <a href="https://github.com/HeroineOS">github.com/HeroineOS</a>.</p></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
