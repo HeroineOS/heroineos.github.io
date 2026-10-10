@@ -7,6 +7,7 @@ const parts = [
   { name: 'HeroLauncher', repo: 'HeroLauncher', what: 'The app launcher: a menu or centered, favorites, categories, search.', state: 'Usable' },
   { name: 'HeroAppearance', repo: 'HeroAppearance', what: 'Themes, the panel\'s layout, the launcher and the wallpaper, all changed live.', state: 'Usable' },
   { name: 'HeroWallpaper', repo: 'HeroWallpaper', what: 'Pictures, animated pictures and looping videos, for next to no memory.', state: 'Usable' },
+  { name: 'HeroNotify', repo: 'HeroNotify', what: 'Notifications for every app, with a history and do-not-disturb schedules.', state: 'Usable' },
   { name: 'HeroPortal', repo: 'HeroPortal', what: 'The open and save dialogs every app gets, browsers included.', state: 'Usable' },
   { name: 'HeroUI', repo: 'HeroUI', what: 'The small Rust toolkit all of them are built with, on FLTK.', state: 'Library' },
   { name: 'HeroUpdate', repo: 'HeroUpdate', what: 'One command that installs and updates every component, until the apt repository is up.', state: 'Tool' },

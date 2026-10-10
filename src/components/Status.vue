@@ -2,7 +2,7 @@
 const roadmap = [
   { done: true, text: 'Panel, launcher, settings, wallpaper and file dialogs' },
   { done: true, text: 'Themes, with live changes everywhere' },
-  { done: false, text: 'Notifications, with history and do-not-disturb' },
+  { done: true, text: 'Notifications, with history and do-not-disturb' },
   { done: false, text: 'Window title bars drawn by the desktop' },
   { done: false, text: 'Signed apt repository: main (HeroineOS) and extra' },
   { done: false, text: 'Installer image' },
