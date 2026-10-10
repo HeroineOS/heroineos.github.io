@@ -1,3 +1,7 @@
+<script setup>
+import DesktopSketch from './DesktopSketch.vue'
+</script>
+
 <template>
   <section id="top" class="hero">
     <div class="wrap grid2">
@@ -19,9 +23,7 @@
         <p class="note">No ISO yet: the desktop's parts run on Debian today.</p>
       </div>
 
-      <figure class="mascot">
-        <img src="/heroine.webp" width="460" height="460" alt="Heroine, the HeroineOS mascot: a catgirl with long taupe hair in a black hoodie" />
-      </figure>
+      <DesktopSketch />
     </div>
   </section>
 </template>
@@ -59,21 +61,6 @@ h1 {
   font-size: 0.9rem;
 }
 
-/* Heroine, on her own background color (the dark surface). */
-.mascot {
-  margin: 0;
-  justify-self: center;
-  max-width: 420px;
-  width: 100%;
-}
-.mascot img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 24px;
-  border: 1px solid var(--border);
-  box-shadow: 0 40px 80px -40px color-mix(in srgb, var(--accent) 45%, transparent);
-}
 @media (max-width: 900px) {
   .grid2 {
     grid-template-columns: 1fr;
