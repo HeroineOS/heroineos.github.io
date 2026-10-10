@@ -1,10 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 
-const install = `mkdir -p ~/.local/bin
-curl -fsSL https://raw.githubusercontent.com/HeroineOS/HeroUpdate/main/heroupdate -o ~/.local/bin/heroupdate
-chmod +x ~/.local/bin/heroupdate
-heroupdate`
+const install = `# the .deb for your machine, from each component's Releases page
+sudo apt install ./herobar_*.deb ./herolauncher_*.deb ./heroappearance_*.deb`
 
 const copied = ref(false)
 async function copy() {
@@ -22,19 +20,20 @@ async function copy() {
       <div>
         <p class="eyebrow">Try it</p>
         <h2>Run the desktop on Debian today.</h2>
-        <p class="lead">There's no installer image yet. The desktop's components already run on Debian (testing or newer) on x86-64 and ARM64: one command fetches the latest of each and keeps them up to date.</p>
+        <p class="lead">There's no installer image yet. The desktop's components already run on Debian (testing or newer) on x86-64 and ARM64, as .deb packages on each one's releases page.</p>
         <ul class="steps">
-          <li>Asks before installing anything, and installs through apt.</li>
-          <li>Run <code>heroupdate --check</code> to only see what's new.</li>
-          <li>Later, a signed apt repository replaces it: <code>sudo apt upgrade</code> and done.</li>
+          <li>Download the <code>amd64</code> or <code>arm64</code> package of the components you want.</li>
+          <li>Install them through apt, which brings what they need along.</li>
+          <li>Later, a signed apt repository: <code>sudo apt upgrade</code> and done.</li>
         </ul>
+        <a class="btn" href="https://github.com/orgs/HeroineOS/repositories" rel="noopener">Find the components</a>
       </div>
       <div class="term">
         <div class="term-head">
           <span>Terminal</span>
           <button class="copy" @click="copy">{{ copied ? 'Copied' : 'Copy' }}</button>
         </div>
-        <pre><code><template v-for="(line, i) in install.split('\n')" :key="i"><span class="p">$ </span>{{ line }}
+        <pre><code><template v-for="(line, i) in install.split('\n')" :key="i"><span v-if="!line.startsWith('#')" class="p">$ </span><span :class="{ c: line.startsWith('#') }">{{ line }}</span>
 </template></code></pre>
       </div>
     </div>
@@ -92,6 +91,9 @@ pre {
   line-height: 1.7;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+.c {
+  color: #8f8a97;
 }
 .p {
   color: var(--accent);
